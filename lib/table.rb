@@ -180,6 +180,27 @@ class Table
   
      	if legal.include?(getfld(coords2))
 
+               if get_figure(coords1.x,coords1.y).class.name == "King"
+                    get_figure(coords1.x,coords1.y).move_history.push(Marshal.dump(coords2))
+                    #castling
+                    if coords2.index == legal[-1].coords.index || coords2.index == legal[-2].coords.index 
+                         #moving rook
+                         if coords2.x == 2
+                              get_field_by_coords(3,coords2.y).figure = get_field_by_coords(0,coords2.y).figure
+                              get_field_by_coords(3,coords2.y).figure.coords = get_field_by_coords(3,coords2.y).coords
+                              get_field_by_coords(0,coords2.y).figure = nil
+                         elsif coords2.x == 6 
+                              get_field_by_coords(5,coords2.y).figure = get_field_by_coords(7,coords2.y).figure
+                              get_field_by_coords(5,coords2.y).figure.coords = get_field_by_coords(5,coords2.y).coords
+                              get_field_by_coords(7,coords2.y).figure = nil
+                         end
+                    end
+
+               end
+               if get_figure(coords1.x,coords1.y).class.name == "Rook"
+                    get_figure(coords1.x,coords1.y).move_history.push(Marshal.dump(coords2))
+               end
+
      		getfld(coords2).figure = getfld(coords1).figure
      		getfld(coords2).figure.coords = coords2
      		getfld(coords1).figure = nil
@@ -201,7 +222,6 @@ class Table
 	end
 
  end
-
 
 
 

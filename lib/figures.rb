@@ -55,12 +55,14 @@ class Figure
 class King < Figure
 	
 	attr_reader :picture
+	attr_accessor :move_history
 
 
 	def initialize(coords,color)
 		
 	 	super(coords,color)
 		@picture = setpicture(color)
+		@move_history = []
 	end
 
 	def setpicture(color)
@@ -72,10 +74,34 @@ class King < Figure
 
 		possible = []
 		possible.push(checking_loop(table,1,0,true), checking_loop(table,-1,0,true), checking_loop(table,-1,-1,true), checking_loop(table,1,1,true), checking_loop(table,-1,-1,true), checking_loop(table,1,-1,true), checking_loop(table,0,-1,true), checking_loop(table,0,1,true)).flatten
+		if @move_history.size == 0 
+			possible.push(castling_moves(table))
+		end
+
+
 		possible.flatten
 
     end
-	
+
+    def castling_moves(table)
+    	possible = []
+    		if table.get_figure(@coords.x+1,@coords.y) == nil && table.get_figure(@coords.x+2,@coords.y) == nil &&  table.get_figure(@coords.x+3,@coords.y) != nil
+
+    				if table.get_figure(@coords.x+3,@coords.y).class.name == "Rook"
+    					
+    						possible.push(table.get_field_by_coords(@coords.x + 2, @coords.y))
+    				end
+    		end
+
+    		if table.get_figure(@coords.x-1,@coords.y) == nil && table.get_figure(@coords.x-2,@coords.y) == nil &&  table.get_figure(@coords.x-3,@coords.y) == nil && table.get_figure(@coords.x-4,@coords.y) != nil
+    				if table.get_figure(@coords.x-4,@coords.y).class.name == "Rook"
+    				possible.push(table.get_field_by_coords(@coords.x - 2, @coords.y))
+    				end
+    		end
+    	
+    	possible
+    end
+
 end	
 
 class Queen < Figure
@@ -105,11 +131,13 @@ end
 class Rook < Figure
 	
 	attr_reader :picture
+	attr_accessor :move_history
 
 	def initialize(coords,color)
 		
 		super(coords,color)
 		@picture = setpicture(color)
+		@move_history = []
 	end
 
 	def setpicture(color)

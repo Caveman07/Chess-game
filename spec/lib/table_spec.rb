@@ -80,4 +80,97 @@ describe Table do
  			expect(@table.is_mate_for?(@table.getfld(ChessCoords.new(4,0)).figure.color)).to be_truthy
  		end
  	end
+
+ 	context "given an open for castling situation on the left side of the board" do 
+
+		  before(:context) do 
+		  	@table = Table.new
+ 			@table.initial_setup
+
+ 			@table.getfld(ChessCoords.new(1,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(2,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(3,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(5,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(6,0)).figure = nil
+
+
+ 		end
+
+ 		it "'make_move' for king performs castling on the left side" do
+ 			@table.make_move(ChessCoords.new(4,0), ChessCoords.new(2,0))
+ 			@table.print_board
+ 			expect(@table.getfld(ChessCoords.new(2,0)).figure.class.name).to eq("King")
+			expect(@table.getfld(ChessCoords.new(3,0)).figure.class.name).to eq("Rook")
+ 		end
+ 	end
+ 	
+ 	context "given an open for castling situation on the right side of the board" do 
+
+		  before(:context) do 
+		  	@table = Table.new
+ 			@table.initial_setup
+
+ 			@table.getfld(ChessCoords.new(1,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(2,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(3,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(5,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(6,0)).figure = nil
+
+
+ 		end
+
+
+ 		it "'make_move' for king performs castling on the right side" do
+ 			@table.make_move(ChessCoords.new(4,0), ChessCoords.new(6,0))
+ 			@table.print_board
+ 			expect(@table.getfld(ChessCoords.new(6,0)).figure.class.name).to eq("King")
+			expect(@table.getfld(ChessCoords.new(5,0)).figure.class.name).to eq("Rook")
+ 		end
+ 	end
+	
+	context "given closed for castling situation on the right side of the board" do 
+
+		  before(:context) do 
+		  	@table = Table.new
+ 			@table.initial_setup
+
+ 			@table.getfld(ChessCoords.new(1,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(5,0)).figure = nil
+
+
+ 		end
+
+
+ 		it "'make_move' for king on the right side raises error " do
+
+ 			expect(@table.make_move(ChessCoords.new(4,0), ChessCoords.new(6,0))).to raise_error
+ 			expect(@table.make_move(ChessCoords.new(4,0), ChessCoords.new(2,0))).to raise_error 
+ 			
+ 		end
+ 	end
+
+ 	context "given an open for castling situation on the right side of the board but king already moved" do 
+
+		before(:context) do 
+		  	@table = Table.new
+ 			@table.initial_setup
+
+ 			@table.getfld(ChessCoords.new(1,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(2,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(3,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(5,0)).figure = nil
+ 			@table.getfld(ChessCoords.new(6,0)).figure = nil
+ 			@table.make_move(ChessCoords.new(4,0), ChessCoords.new(5,0))
+ 			@table.make_move(ChessCoords.new(5,0), ChessCoords.new(4,0))
+
+ 		end
+
+
+ 		it "'make_move' for king on the right doesn't perform castling " do
+
+ 			expect(@table.make_move(ChessCoords.new(4,0), ChessCoords.new(6,0))).to raise_error
+ 			
+ 		end
+ 	end
+
 end
