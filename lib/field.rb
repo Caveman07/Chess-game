@@ -12,9 +12,9 @@ class Field
 	def set_color(coords)
 
 		     if coords.y % 2 == 0
-		     	coords.index % 2 == 0 ? " " : "\u2593"
-		     else
 		     	coords.index % 2 == 0 ? "\u2593" : " "
+		     else
+		     	coords.index % 2 == 0 ? " " : "\u2593"
 		     	 	 		 
 		     end
 	end

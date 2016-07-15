@@ -1,0 +1,826 @@
+--- !ruby/object:Game
+table: !ruby/object:Table
+  width: 8
+  height: 8
+  size: 64
+  field:
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 0
+      index: 0
+    color: " "
+    figure: !ruby/object:Rook
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 0
+        y: 0
+        index: 0
+      picture: "♖"
+      move_history: []
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 0
+      index: 1
+    color: "▓"
+    figure: !ruby/object:Knight
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 1
+        y: 0
+        index: 1
+      picture: "♘"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 0
+      index: 2
+    color: " "
+    figure: !ruby/object:Bishop
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 2
+        y: 0
+        index: 2
+      picture: "♗"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 0
+      index: 3
+    color: "▓"
+    figure: !ruby/object:King
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 3
+        y: 0
+        index: 3
+      picture: "♔"
+      move_history: []
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 4
+      y: 0
+      index: 4
+    color: " "
+    figure: !ruby/object:Queen
+      picture: "♛"
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 4
+        y: 0
+        index: 4
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 0
+      index: 5
+    color: "▓"
+    figure: !ruby/object:Bishop
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 5
+        y: 0
+        index: 5
+      picture: "♗"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 0
+      index: 6
+    color: " "
+    figure: !ruby/object:Knight
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 6
+        y: 0
+        index: 6
+      picture: "♘"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 0
+      index: 7
+    color: "▓"
+    figure: !ruby/object:Rook
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 7
+        y: 0
+        index: 7
+      picture: "♖"
+      move_history: []
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 1
+      index: 8
+    color: "▓"
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 0
+        y: 1
+        index: 8
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 1
+      index: 9
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 1
+        y: 1
+        index: 9
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 1
+      index: 10
+    color: "▓"
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 2
+        y: 1
+        index: 10
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 1
+      index: 11
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 3
+        y: 1
+        index: 11
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 4
+      y: 1
+      index: 12
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 1
+      index: 13
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 5
+        y: 1
+        index: 13
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 1
+      index: 14
+    color: "▓"
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 6
+        y: 1
+        index: 14
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 1
+      index: 15
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: !ruby/object:ChessCoords
+        x: 7
+        y: 1
+        index: 15
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 2
+      index: 16
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 2
+      index: 17
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 2
+      index: 18
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 2
+      index: 19
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: &1 !ruby/object:ChessCoords
+      x: 4
+      y: 2
+      index: 20
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :white
+      coords: *1
+      picture: "♙"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 2
+      index: 21
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 2
+      index: 22
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 2
+      index: 23
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 3
+      index: 24
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 3
+      index: 25
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 3
+      index: 26
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 3
+      index: 27
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 4
+      y: 3
+      index: 28
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 3
+      index: 29
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 3
+      index: 30
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 3
+      index: 31
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 4
+      index: 32
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 4
+      index: 33
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 4
+      index: 34
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 4
+      index: 35
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 4
+      y: 4
+      index: 36
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 4
+      index: 37
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 4
+      index: 38
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 4
+      index: 39
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 5
+      index: 40
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 5
+      index: 41
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 5
+      index: 42
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 5
+      index: 43
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 4
+      y: 5
+      index: 44
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 5
+      index: 45
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 5
+      index: 46
+    color: "▓"
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 5
+      index: 47
+    color: " "
+    figure: 
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 6
+      index: 48
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 0
+        y: 6
+        index: 48
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 6
+      index: 49
+    color: "▓"
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 1
+        y: 6
+        index: 49
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 6
+      index: 50
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 2
+        y: 6
+        index: 50
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 6
+      index: 51
+    color: "▓"
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 3
+        y: 6
+        index: 51
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 4
+      y: 6
+      index: 52
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 4
+        y: 6
+        index: 52
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 6
+      index: 53
+    color: "▓"
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 5
+        y: 6
+        index: 53
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 6
+      index: 54
+    color: " "
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 6
+        y: 6
+        index: 54
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 6
+      index: 55
+    color: "▓"
+    figure: !ruby/object:Pawn
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 7
+        y: 6
+        index: 55
+      picture: "♟"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 0
+      y: 7
+      index: 56
+    color: "▓"
+    figure: !ruby/object:Rook
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 0
+        y: 7
+        index: 56
+      picture: "♜"
+      move_history: []
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 1
+      y: 7
+      index: 57
+    color: " "
+    figure: !ruby/object:Knight
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 1
+        y: 7
+        index: 57
+      picture: "♞"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 2
+      y: 7
+      index: 58
+    color: "▓"
+    figure: !ruby/object:Bishop
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 2
+        y: 7
+        index: 58
+      picture: "♝"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 3
+      y: 7
+      index: 59
+    color: " "
+    figure: !ruby/object:King
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 3
+        y: 7
+        index: 59
+      picture: "♚"
+      move_history: []
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 4
+      y: 7
+      index: 60
+    color: "▓"
+    figure: !ruby/object:Queen
+      picture: "♛"
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 4
+        y: 7
+        index: 60
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 5
+      y: 7
+      index: 61
+    color: " "
+    figure: !ruby/object:Bishop
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 5
+        y: 7
+        index: 61
+      picture: "♝"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 6
+      y: 7
+      index: 62
+    color: "▓"
+    figure: !ruby/object:Knight
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 6
+        y: 7
+        index: 62
+      picture: "♞"
+  - !ruby/object:Field
+    coords: !ruby/object:ChessCoords
+      x: 7
+      y: 7
+      index: 63
+    color: " "
+    figure: !ruby/object:Rook
+      color: :black
+      coords: !ruby/object:ChessCoords
+        x: 7
+        y: 7
+        index: 63
+      picture: "♜"
+      move_history: []
+  history:
+  - !binary |-
+    BAhbRW86CkZpZWxkCDoMQGNvb3Jkc286EENoZXNzQ29vcmRzCDoHQHhpADoH
+    QHlpADoLQGluZGV4aQA6C0Bjb2xvckkiBiAGOgZFVDoMQGZpZ3VyZW86CVJv
+    b2sJOws6CndoaXRlOwZvOwcIOwhpADsJaQA7CmkAOg1AcGljdHVyZUkiCOKZ
+    lgY7DFQ6EkBtb3ZlX2hpc3RvcnlbAG87AAg7Bm87Bwg7CGkGOwlpADsKaQY7
+    C0kiCOKWkwY7DFQ7DW86C0tuaWdodAg7CzsPOwZvOwcIOwhpBjsJaQA7CmkG
+    OxBJIgjimZgGOwxUbzsACDsGbzsHCDsIaQc7CWkAOwppBzsLSSIGIAY7DFQ7
+    DW86C0Jpc2hvcAg7CzsPOwZvOwcIOwhpBzsJaQA7CmkHOxBJIgjimZcGOwxU
+    bzsACDsGbzsHCDsIaQg7CWkAOwppCDsLSSII4paTBjsMVDsNbzoJS2luZwk7
+    CzsPOwZvOwcIOwhpCDsJaQA7CmkIOxBJIgjimZQGOwxUOxFbAG87AAg7Bm87
+    Bwg7CGkJOwlpADsKaQk7C0kiBiAGOwxUOw1vOgpRdWVlbgg7EEkiCOKZmwY7
+    DFQ7CzsPOwZvOwcIOwhpCTsJaQA7CmkJbzsACDsGbzsHCDsIaQo7CWkAOwpp
+    CjsLSSII4paTBjsMVDsNbzsTCDsLOw87Bm87Bwg7CGkKOwlpADsKaQo7EEki
+    COKZlwY7DFRvOwAIOwZvOwcIOwhpCzsJaQA7CmkLOwtJIgYgBjsMVDsNbzsS
+    CDsLOw87Bm87Bwg7CGkLOwlpADsKaQs7EEkiCOKZmAY7DFRvOwAIOwZvOwcI
+    OwhpDDsJaQA7CmkMOwtJIgjilpMGOwxUOw1vOw4JOws7DzsGbzsHCDsIaQw7
+    CWkAOwppDDsQSSII4pmWBjsMVDsRWwBvOwAIOwZvOwcIOwhpADsJaQY7CmkN
+    OwtJIgjilpMGOwxUOw1vOglQYXduCDsLOw87Bm87Bwg7CGkAOwlpBjsKaQ07
+    EEkiCOKZmQY7DFRvOwAIOwZvOwcIOwhpBjsJaQY7CmkOOwtJIgYgBjsMVDsN
+    bzsWCDsLOw87Bm87Bwg7CGkGOwlpBjsKaQ47EEkiCOKZmQY7DFRvOwAIOwZv
+    OwcIOwhpBzsJaQY7CmkPOwtJIgjilpMGOwxUOw1vOxYIOws7DzsGbzsHCDsI
+    aQc7CWkGOwppDzsQSSII4pmZBjsMVG87AAg7Bm87Bwg7CGkIOwlpBjsKaRA7
+    C0kiBiAGOwxUOw1vOxYIOws7DzsGbzsHCDsIaQg7CWkGOwppEDsQSSII4pmZ
+    BjsMVG87AAg7Bm87Bwg7CGkJOwlpBjsKaRE7C0kiCOKWkwY7DFQ7DW87Fgg7
+    CzsPOwZvOwcIOwhpCTsJaQY7CmkROxBJIgjimZkGOwxUbzsACDsGbzsHCDsI
+    aQo7CWkGOwppEjsLSSIGIAY7DFQ7DW87Fgg7CzsPOwZvOwcIOwhpCjsJaQY7
+    CmkSOxBJIgjimZkGOwxUbzsACDsGbzsHCDsIaQs7CWkGOwppEzsLSSII4paT
+    BjsMVDsNbzsWCDsLOw87Bm87Bwg7CGkLOwlpBjsKaRM7EEkiCOKZmQY7DFRv
+    OwAIOwZvOwcIOwhpDDsJaQY7CmkUOwtJIgYgBjsMVDsNbzsWCDsLOw87Bm87
+    Bwg7CGkMOwlpBjsKaRQ7EEkiCOKZmQY7DFRvOwAIOwZvOwcIOwhpADsJaQc7
+    CmkVOwtJIgYgBjsMVDsNMG87AAg7Bm87Bwg7CGkGOwlpBzsKaRY7C0kiCOKW
+    kwY7DFQ7DTBvOwAIOwZvOwcIOwhpBzsJaQc7CmkXOwtJIgYgBjsMVDsNMG87
+    AAg7Bm87Bwg7CGkIOwlpBzsKaRg7C0kiCOKWkwY7DFQ7DTBvOwAIOwZvOwcI
+    OwhpCTsJaQc7CmkZOwtJIgYgBjsMVDsNMG87AAg7Bm87Bwg7CGkKOwlpBzsK
+    aRo7C0kiCOKWkwY7DFQ7DTBvOwAIOwZvOwcIOwhpCzsJaQc7CmkbOwtJIgYg
+    BjsMVDsNMG87AAg7Bm87Bwg7CGkMOwlpBzsKaRw7C0kiCOKWkwY7DFQ7DTBv
+    OwAIOwZvOwcIOwhpADsJaQg7CmkdOwtJIgjilpMGOwxUOw0wbzsACDsGbzsH
+    CDsIaQY7CWkIOwppHjsLSSIGIAY7DFQ7DTBvOwAIOwZvOwcIOwhpBzsJaQg7
+    CmkfOwtJIgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQg7CWkIOwppIDsLSSIG
+    IAY7DFQ7DTBvOwAIOwZvOwcIOwhpCTsJaQg7CmkhOwtJIgjilpMGOwxUOw0w
+    bzsACDsGbzsHCDsIaQo7CWkIOwppIjsLSSIGIAY7DFQ7DTBvOwAIOwZvOwcI
+    OwhpCzsJaQg7CmkjOwtJIgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQw7CWkI
+    OwppJDsLSSIGIAY7DFQ7DTBvOwAIOwZvOwcIOwhpADsJaQk7CmklOwtJIgYg
+    BjsMVDsNMG87AAg7Bm87Bwg7CGkGOwlpCTsKaSY7C0kiCOKWkwY7DFQ7DTBv
+    OwAIOwZvOwcIOwhpBzsJaQk7CmknOwtJIgYgBjsMVDsNMG87AAg7Bm87Bwg7
+    CGkIOwlpCTsKaSg7C0kiCOKWkwY7DFQ7DTBvOwAIOwZvOwcIOwhpCTsJaQk7
+    CmkpOwtJIgYgBjsMVDsNMG87AAg7Bm87Bwg7CGkKOwlpCTsKaSo7C0kiCOKW
+    kwY7DFQ7DTBvOwAIOwZvOwcIOwhpCzsJaQk7CmkrOwtJIgYgBjsMVDsNMG87
+    AAg7Bm87Bwg7CGkMOwlpCTsKaSw7C0kiCOKWkwY7DFQ7DTBvOwAIOwZvOwcI
+    OwhpADsJaQo7CmktOwtJIgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQY7CWkK
+    OwppLjsLSSIGIAY7DFQ7DTBvOwAIOwZvOwcIOwhpBzsJaQo7CmkvOwtJIgji
+    lpMGOwxUOw0wbzsACDsGbzsHCDsIaQg7CWkKOwppMDsLSSIGIAY7DFQ7DTBv
+    OwAIOwZvOwcIOwhpCTsJaQo7CmkxOwtJIgjilpMGOwxUOw0wbzsACDsGbzsH
+    CDsIaQo7CWkKOwppMjsLSSIGIAY7DFQ7DTBvOwAIOwZvOwcIOwhpCzsJaQo7
+    CmkzOwtJIgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQw7CWkKOwppNDsLSSIG
+    IAY7DFQ7DTBvOwAIOwZvOwcIOwhpADsJaQs7Cmk1OwtJIgYgBjsMVDsNbzsW
+    CDsLOgpibGFjazsGbzsHCDsIaQA7CWkLOwppNTsQSSII4pmfBjsMVG87AAg7
+    Bm87Bwg7CGkGOwlpCzsKaTY7C0kiCOKWkwY7DFQ7DW87Fgg7CzsXOwZvOwcI
+    OwhpBjsJaQs7Cmk2OxBJIgjimZ8GOwxUbzsACDsGbzsHCDsIaQc7CWkLOwpp
+    NzsLSSIGIAY7DFQ7DW87Fgg7CzsXOwZvOwcIOwhpBzsJaQs7Cmk3OxBJIgji
+    mZ8GOwxUbzsACDsGbzsHCDsIaQg7CWkLOwppODsLSSII4paTBjsMVDsNbzsW
+    CDsLOxc7Bm87Bwg7CGkIOwlpCzsKaTg7EEkiCOKZnwY7DFRvOwAIOwZvOwcI
+    OwhpCTsJaQs7Cmk5OwtJIgYgBjsMVDsNbzsWCDsLOxc7Bm87Bwg7CGkJOwlp
+    CzsKaTk7EEkiCOKZnwY7DFRvOwAIOwZvOwcIOwhpCjsJaQs7Cmk6OwtJIgji
+    lpMGOwxUOw1vOxYIOws7FzsGbzsHCDsIaQo7CWkLOwppOjsQSSII4pmfBjsM
+    VG87AAg7Bm87Bwg7CGkLOwlpCzsKaTs7C0kiBiAGOwxUOw1vOxYIOws7FzsG
+    bzsHCDsIaQs7CWkLOwppOzsQSSII4pmfBjsMVG87AAg7Bm87Bwg7CGkMOwlp
+    CzsKaTw7C0kiCOKWkwY7DFQ7DW87Fgg7CzsXOwZvOwcIOwhpDDsJaQs7Cmk8
+    OxBJIgjimZ8GOwxUbzsACDsGbzsHCDsIaQA7CWkMOwppPTsLSSII4paTBjsM
+    VDsNbzsOCTsLOxc7Bm87Bwg7CGkAOwlpDDsKaT07EEkiCOKZnAY7DFQ7EVsA
+    bzsACDsGbzsHCDsIaQY7CWkMOwppPjsLSSIGIAY7DFQ7DW87Egg7CzsXOwZv
+    OwcIOwhpBjsJaQw7Cmk+OxBJIgjimZ4GOwxUbzsACDsGbzsHCDsIaQc7CWkM
+    OwppPzsLSSII4paTBjsMVDsNbzsTCDsLOxc7Bm87Bwg7CGkHOwlpDDsKaT87
+    EEkiCOKZnQY7DFRvOwAIOwZvOwcIOwhpCDsJaQw7CmlAOwtJIgYgBjsMVDsN
+    bzsUCTsLOxc7Bm87Bwg7CGkIOwlpDDsKaUA7EEkiCOKZmgY7DFQ7EVsAbzsA
+    CDsGbzsHCDsIaQk7CWkMOwppQTsLSSII4paTBjsMVDsNbzsVCDsQSSII4pmb
+    BjsMVDsLOxc7Bm87Bwg7CGkJOwlpDDsKaUFvOwAIOwZvOwcIOwhpCjsJaQw7
+    CmlCOwtJIgYgBjsMVDsNbzsTCDsLOxc7Bm87Bwg7CGkKOwlpDDsKaUI7EEki
+    COKZnQY7DFRvOwAIOwZvOwcIOwhpCzsJaQw7CmlDOwtJIgjilpMGOwxUOw1v
+    OxIIOws7FzsGbzsHCDsIaQs7CWkMOwppQzsQSSII4pmeBjsMVG87AAg7Bm87
+    Bwg7CGkMOwlpDDsKaUQ7C0kiBiAGOwxUOw1vOw4JOws7FzsGbzsHCDsIaQw7
+    CWkMOwppRDsQSSII4pmcBjsMVDsRWwA=
+  - !binary |-
+    BAhbRW86CkZpZWxkCDoMQGNvb3Jkc286EENoZXNzQ29vcmRzCDoHQHhpADoH
+    QHlpADoLQGluZGV4aQA6C0Bjb2xvckkiBiAGOgZFVDoMQGZpZ3VyZW86CVJv
+    b2sJOws6CndoaXRlOwZvOwcIOwhpADsJaQA7CmkAOg1AcGljdHVyZUkiCOKZ
+    lgY7DFQ6EkBtb3ZlX2hpc3RvcnlbAG87AAg7Bm87Bwg7CGkGOwlpADsKaQY7
+    C0kiCOKWkwY7DFQ7DW86C0tuaWdodAg7CzsPOwZvOwcIOwhpBjsJaQA7CmkG
+    OxBJIgjimZgGOwxUbzsACDsGbzsHCDsIaQc7CWkAOwppBzsLSSIGIAY7DFQ7
+    DW86C0Jpc2hvcAg7CzsPOwZvOwcIOwhpBzsJaQA7CmkHOxBJIgjimZcGOwxU
+    bzsACDsGbzsHCDsIaQg7CWkAOwppCDsLSSII4paTBjsMVDsNbzoJS2luZwk7
+    CzsPOwZvOwcIOwhpCDsJaQA7CmkIOxBJIgjimZQGOwxUOxFbAG87AAg7Bm87
+    Bwg7CGkJOwlpADsKaQk7C0kiBiAGOwxUOw1vOgpRdWVlbgg7EEkiCOKZmwY7
+    DFQ7CzsPOwZvOwcIOwhpCTsJaQA7CmkJbzsACDsGbzsHCDsIaQo7CWkAOwpp
+    CjsLSSII4paTBjsMVDsNbzsTCDsLOw87Bm87Bwg7CGkKOwlpADsKaQo7EEki
+    COKZlwY7DFRvOwAIOwZvOwcIOwhpCzsJaQA7CmkLOwtJIgYgBjsMVDsNbzsS
+    CDsLOw87Bm87Bwg7CGkLOwlpADsKaQs7EEkiCOKZmAY7DFRvOwAIOwZvOwcI
+    OwhpDDsJaQA7CmkMOwtJIgjilpMGOwxUOw1vOw4JOws7DzsGbzsHCDsIaQw7
+    CWkAOwppDDsQSSII4pmWBjsMVDsRWwBvOwAIOwZvOwcIOwhpADsJaQY7CmkN
+    OwtJIgjilpMGOwxUOw1vOglQYXduCDsLOw87Bm87Bwg7CGkAOwlpBjsKaQ07
+    EEkiCOKZmQY7DFRvOwAIOwZvOwcIOwhpBjsJaQY7CmkOOwtJIgYgBjsMVDsN
+    bzsWCDsLOw87Bm87Bwg7CGkGOwlpBjsKaQ47EEkiCOKZmQY7DFRvOwAIOwZv
+    OwcIOwhpBzsJaQY7CmkPOwtJIgjilpMGOwxUOw1vOxYIOws7DzsGbzsHCDsI
+    aQc7CWkGOwppDzsQSSII4pmZBjsMVG87AAg7Bm87Bwg7CGkIOwlpBjsKaRA7
+    C0kiBiAGOwxUOw1vOxYIOws7DzsGbzsHCDsIaQg7CWkGOwppEDsQSSII4pmZ
+    BjsMVG87AAg7Bm87Bwg7CGkJOwlpBjsKaRE7C0kiCOKWkwY7DFQ7DTBvOwAI
+    OwZvOwcIOwhpCjsJaQY7CmkSOwtJIgYgBjsMVDsNbzsWCDsLOw87Bm87Bwg7
+    CGkKOwlpBjsKaRI7EEkiCOKZmQY7DFRvOwAIOwZvOwcIOwhpCzsJaQY7CmkT
+    OwtJIgjilpMGOwxUOw1vOxYIOws7DzsGbzsHCDsIaQs7CWkGOwppEzsQSSII
+    4pmZBjsMVG87AAg7Bm87Bwg7CGkMOwlpBjsKaRQ7C0kiBiAGOwxUOw1vOxYI
+    Ows7DzsGbzsHCDsIaQw7CWkGOwppFDsQSSII4pmZBjsMVG87AAg7Bm87Bwg7
+    CGkAOwlpBzsKaRU7C0kiBiAGOwxUOw0wbzsACDsGbzsHCDsIaQY7CWkHOwpp
+    FjsLSSII4paTBjsMVDsNMG87AAg7Bm87Bwg7CGkHOwlpBzsKaRc7C0kiBiAG
+    OwxUOw0wbzsACDsGbzsHCDsIaQg7CWkHOwppGDsLSSII4paTBjsMVDsNMG87
+    AAg7Bm87Bwg7CGkJOwlpBzsKaRk7C0kiBiAGOwxUOw1vOxYIOws7DzsGQHM7
+    EEkiCOKZmQY7DFRvOwAIOwZvOwcIOwhpCjsJaQc7CmkaOwtJIgjilpMGOwxU
+    Ow0wbzsACDsGbzsHCDsIaQs7CWkHOwppGzsLSSIGIAY7DFQ7DTBvOwAIOwZv
+    OwcIOwhpDDsJaQc7CmkcOwtJIgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQA7
+    CWkIOwppHTsLSSII4paTBjsMVDsNMG87AAg7Bm87Bwg7CGkGOwlpCDsKaR47
+    C0kiBiAGOwxUOw0wbzsACDsGbzsHCDsIaQc7CWkIOwppHzsLSSII4paTBjsM
+    VDsNMG87AAg7Bm87Bwg7CGkIOwlpCDsKaSA7C0kiBiAGOwxUOw0wbzsACDsG
+    bzsHCDsIaQk7CWkIOwppITsLSSII4paTBjsMVDsNMG87AAg7Bm87Bwg7CGkK
+    OwlpCDsKaSI7C0kiBiAGOwxUOw0wbzsACDsGbzsHCDsIaQs7CWkIOwppIzsL
+    SSII4paTBjsMVDsNMG87AAg7Bm87Bwg7CGkMOwlpCDsKaSQ7C0kiBiAGOwxU
+    Ow0wbzsACDsGbzsHCDsIaQA7CWkJOwppJTsLSSIGIAY7DFQ7DTBvOwAIOwZv
+    OwcIOwhpBjsJaQk7CmkmOwtJIgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQc7
+    CWkJOwppJzsLSSIGIAY7DFQ7DTBvOwAIOwZvOwcIOwhpCDsJaQk7CmkoOwtJ
+    IgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQk7CWkJOwppKTsLSSIGIAY7DFQ7
+    DTBvOwAIOwZvOwcIOwhpCjsJaQk7CmkqOwtJIgjilpMGOwxUOw0wbzsACDsG
+    bzsHCDsIaQs7CWkJOwppKzsLSSIGIAY7DFQ7DTBvOwAIOwZvOwcIOwhpDDsJ
+    aQk7CmksOwtJIgjilpMGOwxUOw0wbzsACDsGbzsHCDsIaQA7CWkKOwppLTsL
+    SSII4paTBjsMVDsNMG87AAg7Bm87Bwg7CGkGOwlpCjsKaS47C0kiBiAGOwxU
+    Ow0wbzsACDsGbzsHCDsIaQc7CWkKOwppLzsLSSII4paTBjsMVDsNMG87AAg7
+    Bm87Bwg7CGkIOwlpCjsKaTA7C0kiBiAGOwxUOw0wbzsACDsGbzsHCDsIaQk7
+    CWkKOwppMTsLSSII4paTBjsMVDsNMG87AAg7Bm87Bwg7CGkKOwlpCjsKaTI7
+    C0kiBiAGOwxUOw0wbzsACDsGbzsHCDsIaQs7CWkKOwppMzsLSSII4paTBjsM
+    VDsNMG87AAg7Bm87Bwg7CGkMOwlpCjsKaTQ7C0kiBiAGOwxUOw0wbzsACDsG
+    bzsHCDsIaQA7CWkLOwppNTsLSSIGIAY7DFQ7DW87Fgg7CzoKYmxhY2s7Bm87
+    Bwg7CGkAOwlpCzsKaTU7EEkiCOKZnwY7DFRvOwAIOwZvOwcIOwhpBjsJaQs7
+    Cmk2OwtJIgjilpMGOwxUOw1vOxYIOws7FzsGbzsHCDsIaQY7CWkLOwppNjsQ
+    SSII4pmfBjsMVG87AAg7Bm87Bwg7CGkHOwlpCzsKaTc7C0kiBiAGOwxUOw1v
+    OxYIOws7FzsGbzsHCDsIaQc7CWkLOwppNzsQSSII4pmfBjsMVG87AAg7Bm87
+    Bwg7CGkIOwlpCzsKaTg7C0kiCOKWkwY7DFQ7DW87Fgg7CzsXOwZvOwcIOwhp
+    CDsJaQs7Cmk4OxBJIgjimZ8GOwxUbzsACDsGbzsHCDsIaQk7CWkLOwppOTsL
+    SSIGIAY7DFQ7DW87Fgg7CzsXOwZvOwcIOwhpCTsJaQs7Cmk5OxBJIgjimZ8G
+    OwxUbzsACDsGbzsHCDsIaQo7CWkLOwppOjsLSSII4paTBjsMVDsNbzsWCDsL
+    Oxc7Bm87Bwg7CGkKOwlpCzsKaTo7EEkiCOKZnwY7DFRvOwAIOwZvOwcIOwhp
+    CzsJaQs7Cmk7OwtJIgYgBjsMVDsNbzsWCDsLOxc7Bm87Bwg7CGkLOwlpCzsK
+    aTs7EEkiCOKZnwY7DFRvOwAIOwZvOwcIOwhpDDsJaQs7Cmk8OwtJIgjilpMG
+    OwxUOw1vOxYIOws7FzsGbzsHCDsIaQw7CWkLOwppPDsQSSII4pmfBjsMVG87
+    AAg7Bm87Bwg7CGkAOwlpDDsKaT07C0kiCOKWkwY7DFQ7DW87Dgk7CzsXOwZv
+    OwcIOwhpADsJaQw7Cmk9OxBJIgjimZwGOwxUOxFbAG87AAg7Bm87Bwg7CGkG
+    OwlpDDsKaT47C0kiBiAGOwxUOw1vOxIIOws7FzsGbzsHCDsIaQY7CWkMOwpp
+    PjsQSSII4pmeBjsMVG87AAg7Bm87Bwg7CGkHOwlpDDsKaT87C0kiCOKWkwY7
+    DFQ7DW87Ewg7CzsXOwZvOwcIOwhpBzsJaQw7Cmk/OxBJIgjimZ0GOwxUbzsA
+    CDsGbzsHCDsIaQg7CWkMOwppQDsLSSIGIAY7DFQ7DW87FAk7CzsXOwZvOwcI
+    OwhpCDsJaQw7CmlAOxBJIgjimZoGOwxUOxFbAG87AAg7Bm87Bwg7CGkJOwlp
+    DDsKaUE7C0kiCOKWkwY7DFQ7DW87FQg7EEkiCOKZmwY7DFQ7CzsXOwZvOwcI
+    OwhpCTsJaQw7CmlBbzsACDsGbzsHCDsIaQo7CWkMOwppQjsLSSIGIAY7DFQ7
+    DW87Ewg7CzsXOwZvOwcIOwhpCjsJaQw7CmlCOxBJIgjimZ0GOwxUbzsACDsG
+    bzsHCDsIaQs7CWkMOwppQzsLSSII4paTBjsMVDsNbzsSCDsLOxc7Bm87Bwg7
+    CGkLOwlpDDsKaUM7EEkiCOKZngY7DFRvOwAIOwZvOwcIOwhpDDsJaQw7CmlE
+    OwtJIgYgBjsMVDsNbzsOCTsLOxc7Bm87Bwg7CGkMOwlpDDsKaUQ7EEkiCOKZ
+    nAY7DFQ7EVsA
+player1: &2 !ruby/object:Player
+  color: :white
+  status: 
+player2: &3 !ruby/object:Player
+  color: :black
+  status: :moving
+players:
+- *2
+- *3
+moving_player: *3
+other_player: *2
+game: :on
